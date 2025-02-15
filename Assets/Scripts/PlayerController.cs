@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject winTextObject;
     public AudioClip collectSound;
     public AudioClip deathSound;
+    public AudioClip winSound;
+    public AudioClip hitWallSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour {
         if (count >= 12) {
             winTextObject.SetActive(true);
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
+            audioSource.PlayOneShot(winSound);
         }
     }
 
@@ -66,6 +69,9 @@ public class PlayerController : MonoBehaviour {
 
             winTextObject.gameObject.SetActive(true);
             winTextObject.GetComponent<TextMeshProUGUI>().text = "You lose!";
+        }
+        else if (collision.gameObject.CompareTag("Wall")) {
+            audioSource.PlayOneShot(hitWallSound);
         }
     }
 }

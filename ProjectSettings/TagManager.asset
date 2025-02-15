@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Diegetic Audio
   - Non-diegetic Audio
+  - Wall
   layers:
   - Default
   - TransparentFX
