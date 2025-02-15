@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PickUp
   - Enemy
+  - Diegetic Audio
+  - Non-diegetic Audio
   layers:
   - Default
   - TransparentFX

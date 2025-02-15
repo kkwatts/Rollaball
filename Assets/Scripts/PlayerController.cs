@@ -4,19 +4,26 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
+    private AudioSource audioSource;
 
     private float movementX;
     private float movementY;
     public float speed = 0;
+
     private int count;
 
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public AudioClip collectSound;
+    public AudioClip deathSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
         rb = GetComponent<Rigidbody>();
+        audioSource = GameObject.FindWithTag("Non-diegetic Audio").GetComponent<AudioSource>();
+
         count = 0;
+
         SetCountText();
         winTextObject.SetActive(false);
     }
@@ -36,6 +43,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    // Update is called once per frame
     private void FixedUpdate() {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(movement * speed);
@@ -47,12 +55,14 @@ public class PlayerController : MonoBehaviour {
 
             count = count + 1;
             SetCountText();
+            audioSource.PlayOneShot(collectSound);
         }
     }
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Enemy")) {
             Destroy(gameObject);
+            audioSource.PlayOneShot(deathSound);
 
             winTextObject.gameObject.SetActive(true);
             winTextObject.GetComponent<TextMeshProUGUI>().text = "You lose!";
