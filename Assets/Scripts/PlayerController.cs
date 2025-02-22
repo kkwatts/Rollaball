@@ -22,12 +22,15 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject pickupFX;
     public GameObject deathFX;
+    public GameObject winFX;
+    public GameObject trailFX;
 
     public GameObject mainCam;
     public GameObject playerCam;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
+        trailFX.SetActive(false);
         playerCam.SetActive(true);
         mainCam.SetActive(false);
 
@@ -53,6 +56,8 @@ public class PlayerController : MonoBehaviour {
             winTextObject.SetActive(true);
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
             audioSource.PlayOneShot(winSound);
+            var currentWinFX = Instantiate(winFX, transform.position, Quaternion.identity, this.transform);
+            Destroy(currentWinFX, 11);
         }
     }
 
@@ -60,6 +65,13 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate() {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(movement * speed);
+
+        if (Mathf.Abs(rb.linearVelocity.x) >= 1f || Mathf.Abs(rb.linearVelocity.z) >= 1f) {
+            trailFX.SetActive(true);
+        }
+        else {
+            trailFX.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider other) {
