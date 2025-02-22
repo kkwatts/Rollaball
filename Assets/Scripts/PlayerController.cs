@@ -23,8 +23,14 @@ public class PlayerController : MonoBehaviour {
     public GameObject pickupFX;
     public GameObject deathFX;
 
+    public GameObject mainCam;
+    public GameObject playerCam;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
+        playerCam.SetActive(true);
+        mainCam.SetActive(false);
+
         rb = GetComponent<Rigidbody>();
         audioSource = GameObject.FindWithTag("Non-diegetic Audio").GetComponent<AudioSource>();
 
@@ -71,8 +77,13 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Enemy")) {
+            mainCam.SetActive(true);
+
             Destroy(gameObject);
             audioSource.PlayOneShot(deathSound);
+
+            var currentDeathFX = Instantiate(deathFX, transform.position, Quaternion.identity);
+            Destroy(currentDeathFX, 2);
 
             winTextObject.gameObject.SetActive(true);
             winTextObject.GetComponent<TextMeshProUGUI>().text = "You lose!";

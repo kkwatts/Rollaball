@@ -879,7 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833672bdf9e5e9d4cbd272896ad0b7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 8004909447976956107}
 --- !u!195 &620415339
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3251,7 +3251,9 @@ MonoBehaviour:
   winSound: {fileID: 8300000, guid: e5dc0cd8bc94e0641b8ed8bdf90cb39e, type: 3}
   hitWallSound: {fileID: 8300000, guid: 7d3bb5c466e9e4236865fb0d6cbc12bc, type: 3}
   pickupFX: {fileID: 8500639541779006771, guid: 9ac3e91038795f44d91923fe7e4a762c, type: 3}
-  deathFX: {fileID: 0}
+  deathFX: {fileID: 3331316221112805210, guid: 998ca881eaf72514d97b7fb4fbd959e8, type: 3}
+  mainCam: {fileID: 2132928843}
+  playerCam: {fileID: 1313073931}
 --- !u!114 &1857101521
 MonoBehaviour:
   m_ObjectHideFlags: 0
