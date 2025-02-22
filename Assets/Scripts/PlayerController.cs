@@ -14,10 +14,14 @@ public class PlayerController : MonoBehaviour {
 
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+
     public AudioClip collectSound;
     public AudioClip deathSound;
     public AudioClip winSound;
     public AudioClip hitWallSound;
+
+    public GameObject pickupFX;
+    public GameObject deathFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -59,6 +63,9 @@ public class PlayerController : MonoBehaviour {
             count = count + 1;
             SetCountText();
             audioSource.PlayOneShot(collectSound);
+
+            var currentPickupFX = Instantiate(pickupFX, other.transform.position, Quaternion.identity);
+            Destroy(currentPickupFX, 2);
         }
     }
 
