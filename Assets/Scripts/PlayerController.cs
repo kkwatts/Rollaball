@@ -89,6 +89,9 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Enemy")) {
+            // Set the speed of the enemy's animation to 0
+            collision.gameObject.GetComponentInChildren<Animator>().SetFloat("speed_f", 0);
+
             mainCam.SetActive(true);
 
             Destroy(gameObject);

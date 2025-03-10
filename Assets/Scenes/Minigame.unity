@@ -341,6 +341,11 @@ Transform:
   - {fileID: 1367762053}
   m_Father: {fileID: 1160921195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &210843453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+  m_PrefabInstance: {fileID: 732519075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &256304275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6188443444010704226, guid: dd345832ea71937458e1e721eb90f4f6, type: 3}
@@ -1426,6 +1431,71 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708675989}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &732519075
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1710014492}
+    m_Modifications:
+    - target: {fileID: 3973981410944483575, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_Name
+      value: Character_KenneySurvivor01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160878105103392258, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebfda76f567ba6440ac2348e063edb18, type: 3}
 --- !u!1 &760230764
 GameObject:
   m_ObjectHideFlags: 0
@@ -10163,7 +10233,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 210843453}
   m_Father: {fileID: 620415340}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1710014493
@@ -10194,7 +10265,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710014491}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
