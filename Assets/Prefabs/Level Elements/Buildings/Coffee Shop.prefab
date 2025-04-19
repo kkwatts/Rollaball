@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5202531753728993432}
   - component: {fileID: 8495263043253463054}
   - component: {fileID: 1016427381404322338}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Coffee Shop
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

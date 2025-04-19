@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7499037431768827325}
   - component: {fileID: 1693448472642870591}
   - component: {fileID: 490409297995642977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tree Stump
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

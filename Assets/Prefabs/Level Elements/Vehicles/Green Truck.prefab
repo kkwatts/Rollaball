@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5774864673978398021}
   - component: {fileID: 5851261326397979501}
   - component: {fileID: 4377473185223620452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green Truck
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

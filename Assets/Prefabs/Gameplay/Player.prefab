@@ -6461,6 +6461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  pushForce: 1000
   countText: {fileID: 0}
   winTextObject: {fileID: 0}
   collectSound: {fileID: 8300000, guid: 4a43edb6526bd476eb7d64e97bb96f1b, type: 3}

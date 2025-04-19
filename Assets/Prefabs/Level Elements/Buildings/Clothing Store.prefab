@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4204007150479397062}
   - component: {fileID: 3775663009465614766}
   - component: {fileID: 3532760816417047864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Clothing Store
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

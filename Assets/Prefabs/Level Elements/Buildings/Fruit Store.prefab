@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1909524111040861617}
   - component: {fileID: 2272836160118541712}
   - component: {fileID: 8173266456120171208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fruit Store
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

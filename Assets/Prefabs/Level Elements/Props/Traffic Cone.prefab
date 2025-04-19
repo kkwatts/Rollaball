@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5196196505887882691}
   - component: {fileID: 6844826905070623905}
   - component: {fileID: 3259648153813599352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Traffic Cone
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

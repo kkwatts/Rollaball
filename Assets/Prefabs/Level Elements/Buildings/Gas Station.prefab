@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6144567190396591388}
   - component: {fileID: 3015396978453321995}
   - component: {fileID: 2835797039921302696}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gas Station
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

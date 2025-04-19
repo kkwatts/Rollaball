@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6958681464509443181}
   - component: {fileID: 4642554970073825801}
   - component: {fileID: 1190569440893520800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Solar Panel
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

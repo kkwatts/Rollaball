@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3547294178986162613}
   - component: {fileID: 4490366863160902827}
   - component: {fileID: 1770370677275645494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Yellow Truck
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

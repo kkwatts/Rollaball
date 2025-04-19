@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1938091813177518843}
   - component: {fileID: 8656794301087219798}
   - component: {fileID: 2944118078488211993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green Condo 1
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7158311838891346432}
   - component: {fileID: 3766316867881694768}
   - component: {fileID: 6187008943127788779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Restaurant
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

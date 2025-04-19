@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1890236152440744292}
   - component: {fileID: 9054727153604408327}
   - component: {fileID: 713943141481654289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Window 2
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

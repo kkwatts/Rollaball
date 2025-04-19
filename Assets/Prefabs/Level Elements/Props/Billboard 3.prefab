@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7778150563374091778}
   - component: {fileID: 2153811854129127142}
   - component: {fileID: 2965525568527824946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Billboard 3
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

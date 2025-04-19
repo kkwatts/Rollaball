@@ -3,22 +3,26 @@ using UnityEngine.InputSystem;
 using TMPro;
 
 public class PlayerController : MonoBehaviour {
-    private Rigidbody rb;
+    private Rigidbody rb, objectRB;
     private AudioSource audioSource;
     private Animator anim;
     private GameObject character;
     private GameObject camRotation;
+    private GameObject grabbedObject;
     private LayerMask pickUpLayer;
 
     private Vector3 movement;
     private Vector2 movementAmount;
+    private Vector3 lastMovement;
     private int count;
+    private bool isPile;
 
     private KeyCode grab;
     private KeyCode release;
     private KeyCode push;
 
     public float speed = 0;
+    public float pushForce;
 
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
@@ -48,6 +52,7 @@ public class PlayerController : MonoBehaviour {
         character = transform.GetChild(0).gameObject;
         camRotation = transform.GetChild(1).gameObject;
         pickUpLayer = LayerMask.GetMask("PickUp");
+        grabbedObject = null;
 
         grab = KeyCode.E;
         release = KeyCode.E;
@@ -79,25 +84,75 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     private void Update() {
-        Vector3 rayPos = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
-        
-        if (Input.GetKeyDown(grab)) {
-            Debug.Log("Grab");
-            if (Physics.Raycast(rayPos, character.transform.forward, out RaycastHit hit, -2f, pickUpLayer)) {
-                Debug.Log("Grabbed");
-                if (hit.transform.gameObject.CompareTag("Collectable")) {
+        Vector3 rayPos = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
+        Debug.DrawRay(rayPos, character.transform.forward * -2f, Color.red);
 
+        if (grabbedObject != null) {
+            if (isPile) {
+                objectRB = grabbedObject.GetComponent<Rigidbody>();
+                objectRB.linearVelocity = new Vector3(0f, objectRB.linearVelocity.y, 0f);
+                Vector3 offset = new Vector3(transform.position.x + character.transform.forward.x * -2f, objectRB.position.y, transform.position.z + character.transform.forward.z * -2f);
+                objectRB.position = offset;
+                objectRB.AddForce(movement * speed);
+            }
+            else if (grabbedObject.GetComponent<BoxCollider>().enabled) {
+                objectRB = grabbedObject.GetComponent<Rigidbody>();
+                grabbedObject.GetComponent<BoxCollider>().enabled = false;
+                objectRB.isKinematic = true;
+            }
+            else {
+                Vector3 offset = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+                objectRB.position = offset;
+                objectRB.rotation = Quaternion.Euler(Vector3.zero);
+                objectRB.linearVelocity = Vector3.zero;
+            }
+
+            if (Input.GetKeyDown(release)) {
+                if (!isPile) {
+                    grabbedObject.GetComponent<BoxCollider>().enabled = true;
+                    objectRB.isKinematic = false;
+                }
+                grabbedObject = null;
+            }
+            else if (Input.GetKeyDown(push)) {
+                if (!isPile) {
+                    grabbedObject.GetComponent<BoxCollider>().enabled = true;
+                    objectRB.isKinematic = false;
+                }
+                objectRB.AddForce(lastMovement * pushForce);
+                grabbedObject = null;
+            }
+
+            if (isPile && Mathf.Abs(transform.position.y - objectRB.position.y) > 2f) {
+                grabbedObject = null;
+            }
+        }
+
+        if (Input.GetKeyDown(grab) && objectRB == null) {
+            if (Physics.Raycast(rayPos, character.transform.forward * -1f, out RaycastHit hit, 2f, pickUpLayer)) {
+                if (hit.transform.gameObject.CompareTag("Collectable") && hit.transform.gameObject.GetComponent<Rigidbody>().mass <= rb.mass) {
+                    grabbedObject = hit.transform.gameObject;
+                    isPile = false;
                 }
                 else if (hit.transform.gameObject.CompareTag("Pile")) {
-                    Debug.Log("Grabbed pile");
+                    grabbedObject = hit.transform.gameObject;
+                    isPile = true;
                 }
             }
+        }
+
+        if (grabbedObject == null) {
+            objectRB = null;
         }
     }
 
     // Update is called once per frame
     private void FixedUpdate() {
         movement = camRotation.transform.forward * movementAmount.y + camRotation.transform.right * movementAmount.x;
+
+        if (movement != Vector3.zero) {
+            lastMovement = movement;
+        }
 
         if (!(movementAmount.x == 0f && movementAmount.y == 0f)) {
             Quaternion direction = Quaternion.LookRotation(new Vector3(-movement.x, 0.0f, -movement.z), Vector3.up);

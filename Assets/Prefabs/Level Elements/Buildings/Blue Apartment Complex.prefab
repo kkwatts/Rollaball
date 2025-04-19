@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6982199191905703214}
   - component: {fileID: 3704334369559173742}
   - component: {fileID: 6699735049393960275}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blue Apartment Complex
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

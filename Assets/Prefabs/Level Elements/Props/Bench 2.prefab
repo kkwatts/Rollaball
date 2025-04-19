@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6870903385638150632}
   - component: {fileID: 7134892591788157449}
   - component: {fileID: 80891212973895947}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bench 2
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

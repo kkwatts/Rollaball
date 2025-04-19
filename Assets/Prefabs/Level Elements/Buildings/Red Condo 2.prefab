@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7616562295982857892}
   - component: {fileID: 7391099215217504243}
   - component: {fileID: 7263225617956294452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Red Condo 2
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

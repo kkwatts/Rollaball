@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8083537784990583890}
   - component: {fileID: 6942500455371816840}
   - component: {fileID: 1456707333460504594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green Residential Building
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

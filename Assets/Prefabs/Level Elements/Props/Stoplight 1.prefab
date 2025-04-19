@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6661977664278039226}
   - component: {fileID: 3925712693729737826}
   - component: {fileID: 3765865808717902824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stoplight 1
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6089068411517444866}
   - component: {fileID: 6329333038126514887}
   - component: {fileID: 8919066769024797489}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tan Truck
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

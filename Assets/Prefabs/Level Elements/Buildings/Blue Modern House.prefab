@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 9119651210468304953}
   - component: {fileID: 6890410411688662986}
   - component: {fileID: 3694543507792788623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blue Modern House
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

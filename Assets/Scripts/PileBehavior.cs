@@ -18,9 +18,10 @@ public class PileBehavior : MonoBehaviour {
         rb.mass = radius;
     }
 
-    void OnTriggerEnter(Collider col) {
+    void OnCollisionEnter(Collision col) {
         if (col.gameObject.CompareTag("Collectable") && col.gameObject.GetComponent<Rigidbody>().mass <= rb.mass) {
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            col.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             col.transform.parent = transform;
             col.transform.localPosition = GetPosition();
             radius += col.gameObject.GetComponent<PickUpBehavior>().size;

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4841451528872768359}
   - component: {fileID: 1265520659350119967}
   - component: {fileID: 7880812546088563462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bus Stop
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

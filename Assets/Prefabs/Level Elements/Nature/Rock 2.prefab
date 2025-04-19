@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 940242488041234066}
   - component: {fileID: 1776058512037101546}
   - component: {fileID: 7523824736648082669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock 2
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

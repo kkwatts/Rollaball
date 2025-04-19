@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 156762290664038790}
   - component: {fileID: 8683533986915812272}
   - component: {fileID: 4079259929797103375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Brown SUV
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

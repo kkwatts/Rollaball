@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5405548637024022931}
   - component: {fileID: 73961459468561892}
   - component: {fileID: 6895605280741854075}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Potted Plant 1
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1641601201904394322}
   - component: {fileID: 5450799469339409875}
   - component: {fileID: 639459828990459690}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green SUV
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

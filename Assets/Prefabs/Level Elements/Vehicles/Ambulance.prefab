@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7916820027585081280}
   - component: {fileID: 5996323396405150756}
   - component: {fileID: 7879974544201150301}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ambulance
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

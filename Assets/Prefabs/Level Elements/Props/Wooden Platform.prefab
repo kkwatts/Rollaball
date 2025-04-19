@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2350931581499485953}
   - component: {fileID: 7502708486835857160}
   - component: {fileID: 204801750926246759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wooden Platform
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

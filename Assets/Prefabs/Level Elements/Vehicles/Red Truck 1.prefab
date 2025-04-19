@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6260415020634735217}
   - component: {fileID: 62142963875169751}
   - component: {fileID: 1918454662727681777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Red Truck 1
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

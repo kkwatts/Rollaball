@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4550936954365943419}
   - component: {fileID: 3342388747105754873}
   - component: {fileID: 3079997223673743298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Speed Limit Sign
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

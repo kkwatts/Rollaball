@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 325832991903730781}
   - component: {fileID: 6673689828047762119}
   - component: {fileID: 2160062628311226050}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Orange Condo
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

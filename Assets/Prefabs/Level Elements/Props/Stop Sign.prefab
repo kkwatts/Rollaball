@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6195828726350357703}
   - component: {fileID: 8666266640535537874}
   - component: {fileID: 5238408999890642166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stop Sign
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

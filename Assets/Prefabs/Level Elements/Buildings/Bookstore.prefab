@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 341156368993138493}
   - component: {fileID: 2824762226515466598}
   - component: {fileID: 4180068355952530727}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bookstore
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

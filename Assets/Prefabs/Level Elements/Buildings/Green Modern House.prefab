@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6521279873127251738}
   - component: {fileID: 6698712980550389597}
   - component: {fileID: 3544813044424725053}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green Modern House
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

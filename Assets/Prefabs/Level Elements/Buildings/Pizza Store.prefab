@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8326082730234432363}
   - component: {fileID: 4367210222178493890}
   - component: {fileID: 1366931374386719216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pizza Store
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

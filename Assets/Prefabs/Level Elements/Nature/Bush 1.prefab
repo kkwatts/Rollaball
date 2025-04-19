@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1647098087556149430}
   - component: {fileID: 6002215090454095539}
   - component: {fileID: 1713201544887916084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bush 1
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

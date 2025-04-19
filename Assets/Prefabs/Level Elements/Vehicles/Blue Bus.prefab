@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4058231267601787399}
   - component: {fileID: 2194728252144485403}
   - component: {fileID: 2498532646634233332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blue Bus
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

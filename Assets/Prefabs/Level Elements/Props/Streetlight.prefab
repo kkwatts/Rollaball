@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6975569206579536958}
   - component: {fileID: 6922258591633071411}
   - component: {fileID: 8964930082200022414}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Streetlight
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2357312745962694933}
   - component: {fileID: 931891127834790760}
   - component: {fileID: 978800804086576451}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drug Store
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

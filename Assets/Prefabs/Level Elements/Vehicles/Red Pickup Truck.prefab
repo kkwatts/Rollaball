@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4824431015251495492}
   - component: {fileID: 3933458590162520782}
   - component: {fileID: 712873129282042439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Red Pickup Truck
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

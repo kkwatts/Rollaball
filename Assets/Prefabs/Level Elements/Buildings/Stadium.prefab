@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8915218487901097730}
   - component: {fileID: 90648107506552222}
   - component: {fileID: 381023026051062488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stadium
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

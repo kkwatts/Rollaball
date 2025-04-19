@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7757559233162200456}
   - component: {fileID: 4243083210522017253}
   - component: {fileID: 5984819747014296885}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Red Truck 2
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

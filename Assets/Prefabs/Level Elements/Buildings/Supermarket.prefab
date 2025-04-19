@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8746732320691903269}
   - component: {fileID: 7145608560844946093}
   - component: {fileID: 7583041150145997902}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Supermarket
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5616335195706105125}
   - component: {fileID: 611263156725554863}
   - component: {fileID: 8972537439979347651}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Air Conditioning Unit
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

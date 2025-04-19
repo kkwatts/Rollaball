@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5869109197358608156}
   - component: {fileID: 2359251807369841796}
   - component: {fileID: 1323981875596428952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Yellow Condo 1
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

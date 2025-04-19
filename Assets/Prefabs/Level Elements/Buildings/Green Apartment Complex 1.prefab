@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 595726979993069608}
   - component: {fileID: 3095515242826434588}
   - component: {fileID: 5080595883254881497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green Apartment Complex 1
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

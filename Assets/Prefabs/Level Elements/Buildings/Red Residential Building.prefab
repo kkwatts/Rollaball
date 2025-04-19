@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 702069746764860978}
   - component: {fileID: 6294117779057797137}
   - component: {fileID: 4680854338460646474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Red Residential Building
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
