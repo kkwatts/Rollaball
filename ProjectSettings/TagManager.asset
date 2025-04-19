@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - PickUp
-  - Enemy
   - Diegetic Audio
   - Non-diegetic Audio
   - Wall
   - Game Camera
+  - Pile
+  - Collectable
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - PickUp
   - 
   - 
   - 

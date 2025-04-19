@@ -5,12 +5,20 @@ using TMPro;
 public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
     private AudioSource audioSource;
+    private Animator anim;
+    private GameObject character;
+    private GameObject camRotation;
+    private LayerMask pickUpLayer;
 
-    private float movementX;
-    private float movementY;
-    public float speed = 0;
-
+    private Vector3 movement;
+    private Vector2 movementAmount;
     private int count;
+
+    private KeyCode grab;
+    private KeyCode release;
+    private KeyCode push;
+
+    public float speed = 0;
 
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
@@ -36,17 +44,25 @@ public class PlayerController : MonoBehaviour {
 
         rb = GetComponent<Rigidbody>();
         audioSource = GameObject.FindWithTag("Non-diegetic Audio").GetComponent<AudioSource>();
+        anim = GetComponentInChildren<Animator>();
+        character = transform.GetChild(0).gameObject;
+        camRotation = transform.GetChild(1).gameObject;
+        pickUpLayer = LayerMask.GetMask("PickUp");
+
+        grab = KeyCode.E;
+        release = KeyCode.E;
+        push = KeyCode.Space;
 
         count = 0;
+        movement = Vector3.zero;
+        movementAmount = Vector2.zero;
 
         SetCountText();
         winTextObject.SetActive(false);
     }
 
     void OnMove(InputValue movementValue) {
-        Vector2 movementVector = movementValue.Get<Vector2>();
-        movementX = movementVector.x;
-        movementY = movementVector.y;
+        movementAmount = movementValue.Get<Vector2>();
     }
 
     void SetCountText() {
@@ -62,19 +78,45 @@ public class PlayerController : MonoBehaviour {
     }
 
     // Update is called once per frame
-    private void FixedUpdate() {
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.AddForce(movement * speed);
+    private void Update() {
+        Vector3 rayPos = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+        
+        if (Input.GetKeyDown(grab)) {
+            Debug.Log("Grab");
+            if (Physics.Raycast(rayPos, character.transform.forward, out RaycastHit hit, -2f, pickUpLayer)) {
+                Debug.Log("Grabbed");
+                if (hit.transform.gameObject.CompareTag("Collectable")) {
 
-        if (Mathf.Abs(rb.linearVelocity.x) >= 1f || Mathf.Abs(rb.linearVelocity.z) >= 1f) {
-            trailFX.SetActive(true);
-        }
-        else {
-            trailFX.SetActive(false);
+                }
+                else if (hit.transform.gameObject.CompareTag("Pile")) {
+                    Debug.Log("Grabbed pile");
+                }
+            }
         }
     }
 
-    void OnTriggerEnter(Collider other) {
+    // Update is called once per frame
+    private void FixedUpdate() {
+        movement = camRotation.transform.forward * movementAmount.y + camRotation.transform.right * movementAmount.x;
+
+        if (!(movementAmount.x == 0f && movementAmount.y == 0f)) {
+            Quaternion direction = Quaternion.LookRotation(new Vector3(-movement.x, 0.0f, -movement.z), Vector3.up);
+            character.transform.rotation = Quaternion.Slerp(character.transform.rotation, direction, 0.5f);
+        }
+
+        rb.AddForce(movement * speed);
+
+        if (Mathf.Abs(rb.linearVelocity.x) >= 0.1f || Mathf.Abs(rb.linearVelocity.z) >= 0.1f) {
+            trailFX.SetActive(true);
+            anim.SetBool("Idle", false);
+        }
+        else {
+            trailFX.SetActive(false);
+            anim.SetBool("Idle", true);
+        }
+    }
+
+    /*void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("PickUp")) {
             other.gameObject.SetActive(false);
 
@@ -85,7 +127,7 @@ public class PlayerController : MonoBehaviour {
             var currentPickupFX = Instantiate(pickupFX, other.transform.position, Quaternion.identity);
             Destroy(currentPickupFX, 2);
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Enemy")) {
