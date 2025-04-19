@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4327423237899560260}
   - component: {fileID: 2485116213038764092}
   - component: {fileID: 2538771638878562940}
+  - component: {fileID: 8268834575090394471}
   m_Layer: 6
   m_Name: Blue Condo
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &8268834575090394471
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511872007357383809}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 8.946, y: 4.5270004, z: 6.301}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.56100005, y: 4.526, z: -0.133}
+  m_TimeToStationary: 0.5

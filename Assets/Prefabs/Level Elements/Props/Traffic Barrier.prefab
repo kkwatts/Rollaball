@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1411905694885694705}
   - component: {fileID: 2243930976958519202}
   - component: {fileID: 9049208565538197689}
+  - component: {fileID: -7328343366992254933}
   m_Layer: 6
   m_Name: Traffic Barrier
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &-7328343366992254933
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4048197152716285151}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.8000001, y: 1.024, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.023, z: 0}
+  m_TimeToStationary: 0.5

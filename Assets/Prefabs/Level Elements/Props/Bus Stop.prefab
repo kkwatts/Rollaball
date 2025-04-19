@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4841451528872768359}
   - component: {fileID: 1265520659350119967}
   - component: {fileID: 7880812546088563462}
+  - component: {fileID: 753487677802322427}
   m_Layer: 6
   m_Name: Bus Stop
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &753487677802322427
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320557760586756051}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.0000002, y: 2.4880002, z: 2}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.4880002, z: 1.8520001}
+  m_TimeToStationary: 0.5

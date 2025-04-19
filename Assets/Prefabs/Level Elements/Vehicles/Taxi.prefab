@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3192514677895956664}
   - component: {fileID: 5364979223092781764}
   - component: {fileID: 8061563169415911921}
+  - component: {fileID: 2188129323988295132}
   m_Layer: 6
   m_Name: Taxi
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &2188129323988295132
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334183681854322344}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.4790001, y: 1.217, z: 3.16}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.006, y: 1.2160001, z: -0.193}
+  m_TimeToStationary: 0.5

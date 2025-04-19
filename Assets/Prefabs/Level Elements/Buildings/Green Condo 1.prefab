@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1938091813177518843}
   - component: {fileID: 8656794301087219798}
   - component: {fileID: 2944118078488211993}
+  - component: {fileID: -5786873928116814614}
   m_Layer: 6
   m_Name: Green Condo 1
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &-5786873928116814614
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436694586565076873}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 8.791, y: 4.5220003, z: 6.504}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.423, y: 4.5220003, z: -0.106000006}
+  m_TimeToStationary: 0.5

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7591719530528147584}
   - component: {fileID: 1647098087556149430}
   - component: {fileID: 6002215090454095539}
-  - component: {fileID: 1713201544887916084}
+  - component: {fileID: 4757995649641605122}
+  - component: {fileID: -88157219617094155}
   m_Layer: 6
   m_Name: Bush 1
   m_TagString: Collectable
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7643190233311750654}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.0457351, y: -0.785, z: -9.722034}
   m_LocalScale: {x: 2.7718222, y: 2.7718222, z: 2.7718222}
   m_ConstrainProportionsScale: 0
@@ -132,8 +133,8 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
---- !u!136 &1713201544887916084
-CapsuleCollider:
+--- !u!65 &4757995649641605122
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,8 +151,22 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.41314238
-  m_Height: 0.82927555
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 0.79905903, y: 0.82927555, z: 0.82628477}
   m_Center: {x: 0.028796747, y: 0.38929102, z: -0.042423353}
+--- !u!208 &-88157219617094155
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643190233311750654}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.4, y: 0.41500002, z: 0.41300002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.029000001, y: 0.38900003, z: -0.042000003}
+  m_TimeToStationary: 0.5

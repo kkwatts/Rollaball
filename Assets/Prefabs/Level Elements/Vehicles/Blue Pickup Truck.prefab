@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3183089108877723839}
   - component: {fileID: 7288409424407844275}
   - component: {fileID: 3981543917874297086}
+  - component: {fileID: -1176911173981210698}
   m_Layer: 6
   m_Name: Blue Pickup Truck
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &-1176911173981210698
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358102809355616531}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.5500001, y: 1.1370001, z: 2.983}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.001, y: 1.1320001, z: 0.134}
+  m_TimeToStationary: 0.5

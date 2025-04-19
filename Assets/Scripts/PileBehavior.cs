@@ -5,6 +5,7 @@ public class PileBehavior : MonoBehaviour {
     private Rigidbody rb;
 
     public float startSize;
+    public GameObject gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -20,11 +21,12 @@ public class PileBehavior : MonoBehaviour {
 
     void OnCollisionEnter(Collision col) {
         if (col.gameObject.CompareTag("Collectable") && col.gameObject.GetComponent<Rigidbody>().mass <= rb.mass) {
-            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            col.gameObject.GetComponent<Collider>().enabled = false;
             col.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             col.transform.parent = transform;
             col.transform.localPosition = GetPosition();
             radius += col.gameObject.GetComponent<PickUpBehavior>().size;
+            gameManager.GetComponent<GameManager>().DisplayCount();
         }
     }
 

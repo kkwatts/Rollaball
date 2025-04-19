@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4204007150479397062}
   - component: {fileID: 3775663009465614766}
   - component: {fileID: 3532760816417047864}
+  - component: {fileID: -8517413287618498957}
   m_Layer: 6
   m_Name: Clothing Store
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &-8517413287618498957
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667047065538004343}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.063, y: 5.8030005, z: 6.078}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.083000004, y: 5.8030005, z: 0.035}
+  m_TimeToStationary: 0.5

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3381562357735789044}
   - component: {fileID: 6076198317539789598}
   - component: {fileID: 9092750548660583794}
+  - component: {fileID: 1970905401623039429}
   m_Layer: 6
   m_Name: Yellow Apartment Complex
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &1970905401623039429
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4761347838117195672}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.5000005, y: 8.464001, z: 6.5330005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 8.464001, z: 0.476}
+  m_TimeToStationary: 0.5

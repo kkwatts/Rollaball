@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3903633831896128789}
   - component: {fileID: 8164348828290246839}
   - component: {fileID: 7031832448927570505}
+  - component: {fileID: -4802448454190089444}
   m_Layer: 6
   m_Name: Fence 3
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &-4802448454190089444
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4090395625594248652}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.90000004, y: 1.108, z: 0.080000006}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.004, y: 1.108, z: 0.017}
+  m_TimeToStationary: 0.5

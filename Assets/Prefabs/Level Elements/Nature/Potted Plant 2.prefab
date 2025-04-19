@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3440563972939795519}
   - component: {fileID: 2518935512329722314}
   - component: {fileID: 9032092853208924088}
+  - component: {fileID: -2290299577187196059}
   m_Layer: 6
   m_Name: Potted Plant 2
   m_TagString: Collectable
@@ -153,3 +154,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.72827005, y: 0.9313719, z: 0.72827005}
   m_Center: {x: -0.00000008940697, y: 0.4656033, z: -0.00000008940697}
+--- !u!208 &-2290299577187196059
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544788230287418101}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.36400002, y: 0.46600002, z: 0.36400002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.46600002, z: 0}
+  m_TimeToStationary: 0.5

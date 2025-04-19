@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7778150563374091778}
   - component: {fileID: 2153811854129127142}
   - component: {fileID: 2965525568527824946}
+  - component: {fileID: -3354219932170412617}
   m_Layer: 6
   m_Name: Billboard 3
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &-3354219932170412617
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822369281598253238}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.80700004, y: 1.312, z: 0.147}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.3110001, z: 0.003}
+  m_TimeToStationary: 0.5

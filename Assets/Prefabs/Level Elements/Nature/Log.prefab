@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1077715957351027772}
   - component: {fileID: 6048421672242623724}
   - component: {fileID: 2418633460181027371}
+  - component: {fileID: 2369839711245709025}
   m_Layer: 6
   m_Name: Log
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &2369839711245709025
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250911264679077057}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.407, y: 0.105000004, z: 0.075}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.002, y: 0.045, z: -0.001}
+  m_TimeToStationary: 0.5

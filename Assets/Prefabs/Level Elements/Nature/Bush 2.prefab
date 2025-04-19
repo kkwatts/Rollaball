@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2495245429665847118}
   - component: {fileID: 1018090520751098995}
   - component: {fileID: 1957188702575881421}
+  - component: {fileID: 3925596188494839093}
   m_Layer: 6
   m_Name: Bush 2
   m_TagString: Collectable
@@ -155,3 +156,19 @@ CapsuleCollider:
   m_Height: 0.9894747
   m_Direction: 1
   m_Center: {x: -0.007968366, y: 0.4634221, z: -0.011823893}
+--- !u!208 &3925596188494839093
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405572007162494096}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.58900005, y: 0.49500003, z: 0.60800004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.008, y: 0.46300003, z: -0.012}
+  m_TimeToStationary: 0.5

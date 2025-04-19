@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5628423400213950077}
   - component: {fileID: 7877145559129635130}
   - component: {fileID: 49240195779327388}
+  - component: {fileID: -625517142694811179}
   m_Layer: 6
   m_Name: Red Condo 3
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &-625517142694811179
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406961699231476336}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 8.628, y: 4.8050003, z: 7.2040005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.07700001, y: 4.743, z: -0.18}
+  m_TimeToStationary: 0.5

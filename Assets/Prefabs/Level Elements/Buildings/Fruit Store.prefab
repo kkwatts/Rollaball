@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1909524111040861617}
   - component: {fileID: 2272836160118541712}
   - component: {fileID: 8173266456120171208}
+  - component: {fileID: 5649694183319663633}
   m_Layer: 6
   m_Name: Fruit Store
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &5649694183319663633
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6896925391838177173}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.063, y: 5.8030005, z: 6.078}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.135, y: 5.8030005, z: 0.089}
+  m_TimeToStationary: 0.5

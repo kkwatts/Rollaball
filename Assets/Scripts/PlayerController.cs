@@ -8,14 +8,14 @@ public class PlayerController : MonoBehaviour {
     private Animator anim;
     private GameObject character;
     private GameObject camRotation;
-    private GameObject grabbedObject;
     private LayerMask pickUpLayer;
 
     private Vector3 movement;
     private Vector2 movementAmount;
     private Vector3 lastMovement;
-    private int count;
     private bool isPile;
+    private Vector3 targetPos;
+    [SerializeField] private bool isMoving = false;
 
     private KeyCode grab;
     private KeyCode release;
@@ -24,27 +24,15 @@ public class PlayerController : MonoBehaviour {
     public float speed = 0;
     public float pushForce;
 
-    public TextMeshProUGUI countText;
-    public GameObject winTextObject;
-
-    public AudioClip collectSound;
-    public AudioClip deathSound;
-    public AudioClip winSound;
-    public AudioClip hitWallSound;
-
-    public GameObject pickupFX;
-    public GameObject deathFX;
-    public GameObject winFX;
-    public GameObject trailFX;
-
-    public GameObject mainCam;
+    public GameObject grabbedObject;
     public GameObject playerCam;
+    public GameObject gameManager;
+    public AudioClip[] sounds;
+    public GameObject[] VFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        trailFX.SetActive(false);
-        playerCam.SetActive(true);
-        mainCam.SetActive(false);
+        VFX[0].SetActive(false);
 
         rb = GetComponent<Rigidbody>();
         audioSource = GameObject.FindWithTag("Non-diegetic Audio").GetComponent<AudioSource>();
@@ -58,28 +46,12 @@ public class PlayerController : MonoBehaviour {
         release = KeyCode.E;
         push = KeyCode.Space;
 
-        count = 0;
         movement = Vector3.zero;
         movementAmount = Vector2.zero;
-
-        SetCountText();
-        winTextObject.SetActive(false);
     }
 
     void OnMove(InputValue movementValue) {
         movementAmount = movementValue.Get<Vector2>();
-    }
-
-    void SetCountText() {
-        countText.text = "Count: " + count.ToString();
-
-        if (count >= 12) {
-            winTextObject.SetActive(true);
-            Destroy(GameObject.FindGameObjectWithTag("Enemy"));
-            audioSource.PlayOneShot(winSound);
-            var currentWinFX = Instantiate(winFX, transform.position, Quaternion.identity, this.transform);
-            Destroy(currentWinFX, 11);
-        }
     }
 
     // Update is called once per frame
@@ -91,13 +63,13 @@ public class PlayerController : MonoBehaviour {
             if (isPile) {
                 objectRB = grabbedObject.GetComponent<Rigidbody>();
                 objectRB.linearVelocity = new Vector3(0f, objectRB.linearVelocity.y, 0f);
-                Vector3 offset = new Vector3(transform.position.x + character.transform.forward.x * -2f, objectRB.position.y, transform.position.z + character.transform.forward.z * -2f);
+                Vector3 offset = new Vector3(transform.position.x + character.transform.forward.x * -2f * objectRB.mass, objectRB.position.y, transform.position.z + character.transform.forward.z * -2f * objectRB.mass);
                 objectRB.position = offset;
                 objectRB.AddForce(movement * speed);
             }
-            else if (grabbedObject.GetComponent<BoxCollider>().enabled) {
+            else if (grabbedObject.GetComponent<Collider>().enabled) {
                 objectRB = grabbedObject.GetComponent<Rigidbody>();
-                grabbedObject.GetComponent<BoxCollider>().enabled = false;
+                grabbedObject.GetComponent<Collider>().enabled = false;
                 objectRB.isKinematic = true;
             }
             else {
@@ -109,17 +81,17 @@ public class PlayerController : MonoBehaviour {
 
             if (Input.GetKeyDown(release)) {
                 if (!isPile) {
-                    grabbedObject.GetComponent<BoxCollider>().enabled = true;
+                    grabbedObject.GetComponent<Collider>().enabled = true;
                     objectRB.isKinematic = false;
                 }
                 grabbedObject = null;
             }
             else if (Input.GetKeyDown(push)) {
                 if (!isPile) {
-                    grabbedObject.GetComponent<BoxCollider>().enabled = true;
+                    grabbedObject.GetComponent<Collider>().enabled = true;
                     objectRB.isKinematic = false;
                 }
-                objectRB.AddForce(lastMovement * pushForce);
+                objectRB.AddForce(lastMovement * (pushForce * objectRB.mass));
                 grabbedObject = null;
             }
 
@@ -144,6 +116,22 @@ public class PlayerController : MonoBehaviour {
         if (grabbedObject == null) {
             objectRB = null;
         }
+
+        /*if (Input.GetMouseButton(0)) {
+            Ray ray = playerCam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            Debug.DrawRay(ray.origin, ray.direction * 50, Color.yellow);
+
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit)) {
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+                    targetPos = hit.point;
+                    isMoving = true;
+                }
+            }
+        }
+        else {
+            isMoving = false;
+        }*/
     }
 
     // Update is called once per frame
@@ -159,49 +147,42 @@ public class PlayerController : MonoBehaviour {
             character.transform.rotation = Quaternion.Slerp(character.transform.rotation, direction, 0.5f);
         }
 
+        if (isMoving && movement == Vector3.zero) {
+            Vector3 direction = targetPos - rb.position;
+            direction.Normalize();
+            rb.AddForce(direction * speed);
+        }
+
+        if (Vector3.Distance(rb.position, targetPos) < 0.5f) {
+            isMoving = false;
+        }
+
         rb.AddForce(movement * speed);
 
         if (Mathf.Abs(rb.linearVelocity.x) >= 0.1f || Mathf.Abs(rb.linearVelocity.z) >= 0.1f) {
-            trailFX.SetActive(true);
+            VFX[0].SetActive(true);
             anim.SetBool("Idle", false);
         }
         else {
-            trailFX.SetActive(false);
+            VFX[0].SetActive(false);
             anim.SetBool("Idle", true);
         }
     }
 
-    /*void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("PickUp")) {
-            other.gameObject.SetActive(false);
-
-            count = count + 1;
-            SetCountText();
-            audioSource.PlayOneShot(collectSound);
-
-            var currentPickupFX = Instantiate(pickupFX, other.transform.position, Quaternion.identity);
-            Destroy(currentPickupFX, 2);
-        }
-    }*/
-
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Enemy")) {
-            // Set the speed of the enemy's animation to 0
-            collision.gameObject.GetComponentInChildren<Animator>().SetFloat("speed_f", 0);
+            character.SetActive(false);
+            speed = 0f;
 
-            mainCam.SetActive(true);
+            audioSource.PlayOneShot(sounds[1]);
 
-            Destroy(gameObject);
-            audioSource.PlayOneShot(deathSound);
-
-            var currentDeathFX = Instantiate(deathFX, transform.position, Quaternion.identity);
+            var currentDeathFX = Instantiate(VFX[1], transform.position, Quaternion.identity);
             Destroy(currentDeathFX, 2);
 
-            winTextObject.gameObject.SetActive(true);
-            winTextObject.GetComponent<TextMeshProUGUI>().text = "You lose!";
+            gameManager.GetComponent<GameManager>().LoseGame();
         }
-        else if (collision.gameObject.CompareTag("Wall")) {
-            audioSource.PlayOneShot(hitWallSound);
+        else if (!collision.gameObject.CompareTag("Ground")) {
+            audioSource.PlayOneShot(sounds[0]);
         }
     }
 }

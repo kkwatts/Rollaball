@@ -4,13 +4,13 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Diegetic Audio
   - Non-diegetic Audio
-  - Wall
-  - Game Camera
   - Pile
   - Collectable
   - Enemy
+  - Ground
+  - Game Manager
+  - Game Camera
   layers:
   - Default
   - TransparentFX
@@ -19,7 +19,7 @@ TagManager:
   - Water
   - UI
   - PickUp
-  - 
+  - Ground
   - 
   - 
   - 

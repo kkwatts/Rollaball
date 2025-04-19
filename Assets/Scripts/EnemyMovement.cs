@@ -13,14 +13,16 @@ public class EnemyMovement : MonoBehaviour {
         anim = GetComponentInChildren<Animator>();
 
         if (anim) {
-            anim.SetFloat("speed_f", navMeshAgent.speed);
+            anim.SetFloat("speed_f", navMeshAgent.velocity.x + navMeshAgent.velocity.z);
         }
     }
 
     // Update is called once per frame
     void Update() {
-        if (player != null) {
+        anim.SetFloat("speed_f", navMeshAgent.velocity.x + navMeshAgent.velocity.z);
+        if (Vector3.Distance(transform.position, player.position) <= 20f) {
             navMeshAgent.SetDestination(player.position);
         }
+        Debug.Log(anim.GetFloat("speed_f"));
     }
 }

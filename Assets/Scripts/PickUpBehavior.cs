@@ -3,6 +3,7 @@ using UnityEngine;
 public class PickUpBehavior : MonoBehaviour {
     private MeshFilter filter;
     private MeshRenderer render;
+    private GameObject gameManager;
     private int num;
 
     public float size;
@@ -13,6 +14,8 @@ public class PickUpBehavior : MonoBehaviour {
     void Start() {
         filter = GetComponent<MeshFilter>();
         render = GetComponent<MeshRenderer>();
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager");
+        gameManager.GetComponent<GameManager>().GetCount();
 
         num = Random.Range(0, materials.Length);
     }

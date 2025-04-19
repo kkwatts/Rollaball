@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 341156368993138493}
   - component: {fileID: 2824762226515466598}
   - component: {fileID: 4180068355952530727}
+  - component: {fileID: -3254950883696086897}
   m_Layer: 6
   m_Name: Bookstore
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &-3254950883696086897
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396679523675338130}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.0200005, y: 4.1790004, z: 6.018}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.503, y: 4.1790004, z: 0.50600004}
+  m_TimeToStationary: 0.5

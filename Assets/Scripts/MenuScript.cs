@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
     public bool hover;
@@ -49,7 +50,7 @@ public class MenuScript : MonoBehaviour {
     }
 
     public void GoToLevel1() {
-
+        SceneManager.LoadScene("Level1");
     }
 
     public void GoToLevel2() { 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7150593270778367751}
   - component: {fileID: 2181701654561208400}
   - component: {fileID: 9019043931047812926}
+  - component: {fileID: -7242699086022925346}
   m_Layer: 6
   m_Name: Chicken Store
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &-7242699086022925346
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9004430292217408329}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5.609, y: 4.879, z: 5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 4.8780003, z: 0.209}
+  m_TimeToStationary: 0.5

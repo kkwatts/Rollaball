@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1641601201904394322}
   - component: {fileID: 5450799469339409875}
   - component: {fileID: 639459828990459690}
+  - component: {fileID: -7229675570914872507}
   m_Layer: 6
   m_Name: Green SUV
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &-7229675570914872507
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932859733173804173}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.5500001, y: 1.1370001, z: 2.8660002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.091000006, y: 1.1290001, z: 0.09200001}
+  m_TimeToStationary: 0.5

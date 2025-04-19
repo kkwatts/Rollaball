@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8799364962489240550}
   - component: {fileID: 5450844952494326190}
   - component: {fileID: 3013702422700692229}
+  - component: {fileID: 8926601955959388773}
   m_Layer: 6
   m_Name: Bucket
   m_TagString: Collectable
@@ -153,3 +154,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.32197377, y: 0.31786078, z: 0.32197377}
   m_Center: {x: 0, y: 0.15893039, z: 0}
+--- !u!208 &8926601955959388773
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781860249968983431}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.16100001, y: 0.15900001, z: 0.16100001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.15900001, z: 0}
+  m_TimeToStationary: 0.5

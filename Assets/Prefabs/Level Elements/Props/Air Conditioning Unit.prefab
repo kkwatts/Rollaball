@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5616335195706105125}
   - component: {fileID: 611263156725554863}
   - component: {fileID: 8972537439979347651}
+  - component: {fileID: 5953481285939836552}
   m_Layer: 6
   m_Name: Air Conditioning Unit
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &5953481285939836552
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7616352979534129135}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.4120001, y: 0.577, z: 0.70600003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.24000001, y: 0.503, z: -0.034}
+  m_TimeToStationary: 0.5

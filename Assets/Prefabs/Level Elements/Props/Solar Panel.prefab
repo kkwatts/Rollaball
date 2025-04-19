@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6958681464509443181}
   - component: {fileID: 4642554970073825801}
   - component: {fileID: 1190569440893520800}
+  - component: {fileID: -210495838497927559}
   m_Layer: 6
   m_Name: Solar Panel
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &-210495838497927559
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575793662332801499}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.6320001, y: 0.314, z: 1.021}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.314, z: 0.045}
+  m_TimeToStationary: 0.5

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 678896719682738019}
   - component: {fileID: 7491870527483516440}
   - component: {fileID: 4829464598696937083}
+  - component: {fileID: -8689439719448673132}
   m_Layer: 6
   m_Name: Pipe Unit
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &-8689439719448673132
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584433794872165611}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.5350001, y: 0.51000005, z: 1.3510001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.002, y: 0.48900002, z: 0.123}
+  m_TimeToStationary: 0.5

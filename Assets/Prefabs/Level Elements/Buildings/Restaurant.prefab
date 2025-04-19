@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7158311838891346432}
   - component: {fileID: 3766316867881694768}
   - component: {fileID: 6187008943127788779}
+  - component: {fileID: 5657759194635058271}
   m_Layer: 6
   m_Name: Restaurant
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &5657759194635058271
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437617879375640267}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.6790001, y: 5.2060003, z: 3.7040002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.023000002, y: 5.2050004, z: 0.284}
+  m_TimeToStationary: 0.5

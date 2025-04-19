@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 325832991903730781}
   - component: {fileID: 6673689828047762119}
   - component: {fileID: 2160062628311226050}
+  - component: {fileID: 37764191276859992}
   m_Layer: 6
   m_Name: Orange Condo
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &37764191276859992
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520992290506643293}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 8.791, y: 4.5220003, z: 6.504}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.423, y: 4.5220003, z: -0.106000006}
+  m_TimeToStationary: 0.5

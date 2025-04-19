@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2050651303987380498}
   - component: {fileID: 8914712429720784986}
   - component: {fileID: 3964784735119834582}
+  - component: {fileID: 3155703629069447029}
   m_Layer: 6
   m_Name: Fast Food Restaurant
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &3155703629069447029
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7293604794853302285}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5.609, y: 4.879, z: 5.177}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.035, y: 4.879, z: -0.19600001}
+  m_TimeToStationary: 0.5

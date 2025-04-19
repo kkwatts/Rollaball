@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2406744660560834835}
   - component: {fileID: 3036915260336862018}
   - component: {fileID: 6588653784298076322}
+  - component: {fileID: -2651466336078142371}
   m_Layer: 6
   m_Name: Chair
   m_TagString: Collectable
@@ -153,3 +154,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5095057, y: 0.43178472, z: 0.40597326}
   m_Center: {x: 0, y: 0.21589224, z: 0.00000020861629}
+--- !u!208 &-2651466336078142371
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5203391861912258725}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.25500003, y: 0.216, z: 0.20300001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.216, z: 0}
+  m_TimeToStationary: 0.5

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1011311945186900082}
   - component: {fileID: 5433245872676929992}
   - component: {fileID: 7148079457757289113}
+  - component: {fileID: 1416605223545497792}
   m_Layer: 6
   m_Name: Wooden Pier
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &1416605223545497792
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173130938861192633}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.6030002, y: 2.6950002, z: 3.5620003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 2.051, y: -0.30400002, z: -3.673}
+  m_TimeToStationary: 0.5

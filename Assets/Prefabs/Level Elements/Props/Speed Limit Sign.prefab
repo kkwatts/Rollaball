@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4550936954365943419}
   - component: {fileID: 3342388747105754873}
   - component: {fileID: 3079997223673743298}
+  - component: {fileID: 902928250612658025}
   m_Layer: 6
   m_Name: Speed Limit Sign
   m_TagString: Collectable
@@ -153,3 +154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &902928250612658025
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3952364214578070525}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.342, y: 1.1830001, z: 0.034}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.1830001, z: 0}
+  m_TimeToStationary: 0.5

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4836147091471710260}
   - component: {fileID: 4974327709106791975}
   - component: {fileID: 7572187097794130181}
+  - component: {fileID: -1149401341605997240}
   m_Layer: 6
   m_Name: Ladder
   m_TagString: Collectable
@@ -153,3 +154,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.67990315, y: 2.0000002, z: 0.10282228}
   m_Center: {x: 0, y: 1.0000001, z: 0.013804434}
+--- !u!208 &-1149401341605997240
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409344971887924390}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.34, y: 1, z: 0.051000003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1, z: 0.014}
+  m_TimeToStationary: 0.5

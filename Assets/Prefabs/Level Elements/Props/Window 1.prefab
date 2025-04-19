@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5769046457331320214}
   - component: {fileID: 813485421142843664}
   - component: {fileID: 1956035752886129632}
+  - component: {fileID: 7325713966888868074}
   m_Layer: 6
   m_Name: Window 1
   m_TagString: Collectable
@@ -153,3 +154,19 @@ MonoBehaviour:
   isRandomized: 0
   meshes: []
   materials: []
+--- !u!208 &7325713966888868074
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095576510039349284}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.38900003, y: 0.49, z: 0.19900002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 4.518, y: 3.351, z: -0.023000002}
+  m_TimeToStationary: 0.5
