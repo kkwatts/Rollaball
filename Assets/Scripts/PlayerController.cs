@@ -63,7 +63,10 @@ public class PlayerController : MonoBehaviour {
             if (isPile) {
                 objectRB = grabbedObject.GetComponent<Rigidbody>();
                 objectRB.linearVelocity = new Vector3(0f, objectRB.linearVelocity.y, 0f);
-                Vector3 offset = new Vector3(transform.position.x + character.transform.forward.x * -2f * objectRB.mass, objectRB.position.y, transform.position.z + character.transform.forward.z * -2f * objectRB.mass);
+                Vector3 offset = new Vector3(transform.position.x + character.transform.forward.x * -2f, objectRB.position.y, transform.position.z + character.transform.forward.z * -2f);
+                if (objectRB.mass >= 2f) {
+                    //offset += new Vector3(objectRB.mass / 4f, 0f, objectRB.mass / 4f);
+                }
                 objectRB.position = offset;
                 objectRB.AddForce(movement * speed);
             }
@@ -95,9 +98,9 @@ public class PlayerController : MonoBehaviour {
                 grabbedObject = null;
             }
 
-            if (isPile && Mathf.Abs(transform.position.y - objectRB.position.y) > 2f) {
+            /*if (isPile && Mathf.Abs(transform.position.y - objectRB.position.y) > 2f) {
                 grabbedObject = null;
-            }
+            }*/
         }
 
         if (Input.GetKeyDown(grab) && objectRB == null) {
@@ -184,5 +187,9 @@ public class PlayerController : MonoBehaviour {
         else if (!collision.gameObject.CompareTag("Ground")) {
             audioSource.PlayOneShot(sounds[0]);
         }
+    }
+
+    public void Win() {
+        Instantiate(VFX[2], transform.position, Quaternion.identity);
     }
 }

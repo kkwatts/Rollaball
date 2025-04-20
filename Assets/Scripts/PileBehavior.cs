@@ -6,6 +6,9 @@ public class PileBehavior : MonoBehaviour {
 
     public float startSize;
     public GameObject gameManager;
+    public AudioSource audioSource;
+    public AudioClip collectSound;
+    public GameObject collectVFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -15,18 +18,22 @@ public class PileBehavior : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        transform.localScale = new Vector3(radius, radius, radius);
+        transform.localScale = new Vector3(radius / 2f, radius / 2f, radius / 2f);
         rb.mass = radius;
     }
 
     void OnCollisionEnter(Collision col) {
-        if (col.gameObject.CompareTag("Collectable") && col.gameObject.GetComponent<Rigidbody>().mass <= rb.mass) {
+        if (col.gameObject.CompareTag("Collectable") && col.gameObject.GetComponent<Rigidbody>().mass <= rb.mass * 2f) {
             col.gameObject.GetComponent<Collider>().enabled = false;
             col.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             col.transform.parent = transform;
             col.transform.localPosition = GetPosition();
             radius += col.gameObject.GetComponent<PickUpBehavior>().size;
             gameManager.GetComponent<GameManager>().DisplayCount();
+            Destroy(col.gameObject);
+            audioSource.PlayOneShot(collectSound);
+            var currentCollectFX = Instantiate(collectVFX, transform.position, Quaternion.Euler(0f, 0f, 0f));
+            Destroy(currentCollectFX, 2);
         }
     }
 
@@ -80,13 +87,13 @@ public class PileBehavior : MonoBehaviour {
             }
         }
 
-        if (Random.Range(0, 1) == 0) {
+        if (Random.Range(0, 2) == 0) {
             x = -x;
         }
-        if (Random.Range(0, 1) == 0) {
+        if (Random.Range(0, 2) == 0) {
             y = -y;
         }
-        if (Random.Range(0, 1) == 0) {
+        if (Random.Range(0, 2) == 0) {
             z = -z;
         }
 

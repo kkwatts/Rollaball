@@ -150,3 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 1
+  gameManager: {fileID: 0}
+  audioSource: {fileID: 0}
+  collectSound: {fileID: 8300000, guid: e3e2e25b38bf4614eacc527e75a1152a, type: 3}
+  collectVFX: {fileID: 8500639541779006771, guid: 9ac3e91038795f44d91923fe7e4a762c, type: 3}

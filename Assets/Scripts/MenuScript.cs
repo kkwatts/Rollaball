@@ -6,12 +6,15 @@ public class MenuScript : MonoBehaviour {
     public float hoverFactor;
     public float hoverSpeed;
     public GameObject[] camPositions;
+    public AudioClip clip;
 
     private float num;
     private GameObject targetPosition;
+    private GameObject audioSource;
 
     void Start() {
         num = 0;
+        audioSource = GameObject.FindGameObjectWithTag("Non-diegetic Audio");
         if (gameObject.name == "Raccoon") {
             transform.GetChild(0).GetComponent<Animator>().speed = 0f;
         }
@@ -46,15 +49,15 @@ public class MenuScript : MonoBehaviour {
     }
 
     public void GoToInstructions() {
-
+        Camera.main.gameObject.GetComponent<MenuScript>().SwitchCamPosition("Instructions");
     }
 
     public void GoToLevel1() {
         SceneManager.LoadScene("Level1");
     }
 
-    public void GoToLevel2() { 
-        
+    public void GoToLevel2() {
+        SceneManager.LoadScene("Level2");
     }
 
     public void GoToLevel3() { 
@@ -75,5 +78,16 @@ public class MenuScript : MonoBehaviour {
         else if (position.Equals("Level Select")) {
             targetPosition = camPositions[2];
         }
+        else if (position.Equals("Instructions")) {
+            targetPosition = camPositions[3];
+        }
+    }
+
+    public void Pressed() {
+        audioSource.GetComponent<MenuScript>().PlaySound();
+    }
+
+    public void PlaySound() {
+        GetComponent<AudioSource>().PlayOneShot(clip);
     }
 }

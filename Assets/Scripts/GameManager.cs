@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour {
     public GameObject itemCountText;
     public GameObject winText;
     public GameObject loseText;
+    public AudioSource audioSource;
+    public AudioClip winSound;
+    public GameObject player;
 
     private int itemCount;
     private int totalItems = 0;
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour {
     public void DisplayCount() {
         itemCount++;
         if (itemCount == totalItems) {
+            audioSource.PlayOneShot(winSound);
+            player.GetComponent<PlayerController>().Win();
             winTextPosition = new Vector3(-108f, 92f, 0f);
             StartCoroutine(Wait(3, 2));
         }
@@ -72,7 +77,9 @@ public class GameManager : MonoBehaviour {
     }
 
     public void LoseGame() {
-        loseTextPosition = new Vector3(-108f, 92f, 0f);
-        StartCoroutine(Wait(3, 3));
+        if (itemCount != totalItems) {
+            loseTextPosition = new Vector3(-108f, 92f, 0f);
+            StartCoroutine(Wait(3, 3));
+        }
     }
 }

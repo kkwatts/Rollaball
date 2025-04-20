@@ -23,6 +23,5 @@ public class EnemyMovement : MonoBehaviour {
         if (Vector3.Distance(transform.position, player.position) <= 20f) {
             navMeshAgent.SetDestination(player.position);
         }
-        Debug.Log(anim.GetFloat("speed_f"));
     }
 }

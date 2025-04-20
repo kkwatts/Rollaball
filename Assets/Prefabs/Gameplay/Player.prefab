@@ -6070,20 +6070,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909c5b8e6e0df7247ac13d81396d74f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
   speed: 20
   pushForce: 1000
+  grabbedObject: {fileID: 0}
+  playerCam: {fileID: 1122105532710924515}
+  gameManager: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 7d3bb5c466e9e4236865fb0d6cbc12bc, type: 3}
-  - {fileID: 8300000, guid: dfbcebd0db2659d4b9b98b4749d7ac93, type: 3}
-  - {fileID: 8300000, guid: f8e5bc8570f214c7c8a67222b6aefb36, type: 3}
+  - {fileID: 8300000, guid: d1586046be4bc416097c1853a2b649ea, type: 3}
+  - {fileID: 8300000, guid: 453aaf36991504727804d348dd55b5bf, type: 3}
   - {fileID: 8300000, guid: e3e2e25b38bf4614eacc527e75a1152a, type: 3}
   VFX:
   - {fileID: 1801998158915968635}
   - {fileID: 3331316221112805210, guid: 998ca881eaf72514d97b7fb4fbd959e8, type: 3}
   - {fileID: 1032854115306919125, guid: b148da16e02029543bcd0fd57d22adcc, type: 3}
   - {fileID: 8500639541779006771, guid: 9ac3e91038795f44d91923fe7e4a762c, type: 3}
-  mainCam: {fileID: 0}
-  playerCam: {fileID: 1122105532710924515}
 --- !u!136 &217182840899511015
 CapsuleCollider:
   m_ObjectHideFlags: 0
